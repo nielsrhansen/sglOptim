@@ -1,0 +1,84 @@
+---
+title: "README"
+author: "Martin Vincent"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Quick Start}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+params:
+  pkg: sglOptim
+---
+
+```{r, echo = FALSE}
+set.seed(150)
+
+pkg_version <- packageVersion(params$pkg)
+
+x_dcf <- read.dcf(file = file.path(getwd(), "..", "DESCRIPTION"))
+
+if("GitHubRepo" %in% colnames(x_dcf)) {
+  pkg_branch <- x_dcf[1,"GitHubRepo"]
+
+  pkg_version_type <- switch(pkg_branch,
+    release = "release",
+    master = "release candidate",
+    develop = "development version"
+  )
+} else {
+  pkg_branch <- "release"
+  pkg_version_type <- "release"
+}
+```
+
+## Sparse Group Lasso Solver
+
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/`r params$pkg`)](https://cran.r-project.org/package=`r params$pkg`)
+[![Travis-CI Build Status](https://travis-ci.org/vincent-dk/`r params$pkg`.svg?branch=`r pkg_branch`)](https://travis-ci.org/vincent-dk/`r params$pkg`)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/vincent-dk/`r params$pkg`?branch=`r pkg_branch`&svg=true)](https://ci.appveyor.com/project/vincent-dk/`r params$pkg`)
+[![Coverage Status](https://codecov.io/github/vincent-dk/`r params$pkg`/coverage.svg?branch=`r pkg_branch`)](https://codecov.io/github/vincent-dk/`r params$pkg`?branch=`r pkg_branch`)
+
+This is the **`r pkg_version_type`** of R package **`r params$pkg` version `r pkg_version`**.
+
+### R-package Overview
+
+This package is not intended for direct use, it is a service package for other R packages.
+If you want to use the optimizer I recommend you do one of the following:
+
+* To make a **custom sparse group lasso package** (i.e. implement your own loss/objective function) see the GitHub repo [Xsgl](https://github.com/vincent-dk/Xsgl) and documentation therein.
+* For fitting **linear multiple output** models using sparse group lasso see the [lsgl](https://github.com/vincent-dk/lsgl) R-package.
+* For doing **multi-class classification** using sparse group lasso see the [msgl](https://github.com/vincent-dk/msgl) R-package.
+* For doing **multi-label logistic regression** using sparse group lasso see the [logitsgl](https://github.com/vincent-dk/logitsgl) R-package.
+
+For details on the algorithm and more see <http://dx.doi.org/10.1016/j.csda.2013.06.004>. The loss/objective function must be defined in a C++ module, for more information see [Building a Customized Sparse Group Lasso Package](https://vincent-dk.github.io/docs/Xsgl_docs/build_sgl_package.html).
+
+### Installation
+
+Install the released version from CRAN:
+
+```{r eval = FALSE}
+install.packages("sglOptim")
+```
+
+Install the release candidate from GitHub:
+
+```{r eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("vincent-dk/sglOptim")
+```
+
+Install the development version from GitHub:
+
+```{r eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("vincent-dk/sglOptim", ref = "develop")
+```
+
+### Author
+
+Martin Vincent
+
+### License
+
+GPL (>=2)

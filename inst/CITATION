@@ -1,0 +1,31 @@
+citHeader("To cite the 'sglOptim' package in publications use:")
+
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
+vers <- paste("R package version", meta$Version)
+
+citEntry(entry="Manual",
+         title = "sglOptim: Sparse group lasso optimizer",
+         author = personList(as.person("Martin Vincent")),
+         year = year,
+         note = vers,
+
+         textVersion =
+         paste("Martin Vincent (",
+               year,
+               "). sglOptim: Sparse group lasso optimizer. ",
+               vers, ".", sep=""))
+
+citEntry(entry="Article",
+         title = "Sparse group lasso and high dimensional multinomial classification",
+         author = personList(as.person("Vincent, M."),
+                             as.person("Hansen, N. R.")),
+         year    = "2014",
+         journal = "Computational Statistics & Data Analysis",
+         volume = "71",
+         pages = "771--786",
+         doi = "10.1016/j.csda.2013.06.004",
+		 url = "http://www.sciencedirect.com/science/article/pii/S0167947313002168",
+		 textVersion = paste("Vincent, M. and Hansen, N. R.",
+         "Sparse group lasso and high dimensional multinomial classification.",
+         "Computational Statistics & Data Analysis 71 (2014): 771-786.")
+)
