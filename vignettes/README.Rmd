@@ -6,13 +6,11 @@ vignette: >
   %\VignetteIndexEntry{Quick Start}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-params:
-  pkg: sglOptim
 ---
 
 ```{r, echo = FALSE}
 set.seed(150)
-pkg_version <- packageVersion(params$pkg)
+pkg_version <- packageVersion("sglOptim")
 ```
 
 ## Sparse Group Lasso Solver
