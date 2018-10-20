@@ -26,7 +26,7 @@
 #'}
 #'
 #' @docType package
-#' @author Martin Vincent \email{martin.vincent.dk@gmail.com}
+#' @author Martin Vincent 
 #' @name sglOptim
 #' @importFrom tools assertError
 #' @importFrom tools assertWarning

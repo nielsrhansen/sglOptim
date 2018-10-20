@@ -195,9 +195,10 @@ sgl_subsampling <- function(
     stop("lambda must be numeric or a list of numerics")
   }
 
-	call_sym <- paste(module_name, "sgl_subsampling", sep="_")
+	call_sym <- get(paste(module_name, "sgl_subsampling", "R", sep="_"),
+	                asNamespace(PACKAGE))
 
-	# Registre parallel backend
+	# Register parallel backend
 	# This is only to make max.threads work -  remov in 2018
 	if( ! is.null(max.threads) && max.threads > 1) {
 		cl <- makeCluster(max.threads)
@@ -221,15 +222,15 @@ sgl_subsampling <- function(
 				alpha = alpha,
 				test_data = test_data)
 
-			x <- .Call(call_sym, PACKAGE = PACKAGE,
-				args$data,
-				args$test_data,
-				args$block_dim,
-				args$groupWeights,
-				args$parameterWeights,
-				args$alpha,
-				lambda.list[[task]],
-				algorithm.config
+			x <- do.call(call_sym, args = 
+			               list(data = args$data,
+			                    test_data = args$test_data,
+			                    block_dim = args$block_dim,
+			                    groupWeights = args$groupWeights,
+			                    parameterWeights = args$parameterWeights,
+			                    alpha = args$alpha,
+			                    lambda = lambda.list[[task]],
+			                    algorithm.config = algorithm.config)
 			)
 
 			names(x$responses) <- test_data$sample_names
@@ -253,15 +254,15 @@ sgl_subsampling <- function(
 			alpha = alpha,
 			test_data = test_data)
 
-		x <- .Call(call_sym, PACKAGE = PACKAGE,
-			args$data,
-			args$test_data,
-			args$block_dim,
-			args$groupWeights,
-			args$parameterWeights,
-			args$alpha,
-			lambda.list[[task]],
-			algorithm.config
+		x <- do.call(call_sym, args = 
+		               list(data = args$data,
+		                    test_data = args$test_data,
+		                    block_dim = args$block_dim,
+		                    groupWeights = args$groupWeights,
+		                    parameterWeights = args$parameterWeights,
+		                    alpha = args$alpha,
+		                    lambda = lambda.list[[task]],
+		                    algorithm.config = algorithm.config)
 		)
 
 		names(x$responses) <- test_data$sample_names

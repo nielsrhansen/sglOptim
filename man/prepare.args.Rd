@@ -28,9 +28,6 @@ The vector \eqn{\beta^{(J)}} denotes the \eqn{J} parameter group, the dimension 
 The dimensions \eqn{d_J} must be multiple of \eqn{q}, and \eqn{\beta = (\beta^{(1)} \cdots \beta^{(m)})}.
 The group weights \eqn{\gamma \in [0,\infty)^m} and the parameter weights \eqn{\xi \in [0,\infty)^{qp}}.
 }
-\author{
-Martin Vincent
-}
 \seealso{
 prepare.args.sgldata
 
@@ -41,4 +38,6 @@ Other sgldata: \code{\link{add_data.sgldata}},
   \code{\link{rearrange.sgldata}},
   \code{\link{subsample.sgldata}}
 }
-
+\author{
+Martin Vincent
+}

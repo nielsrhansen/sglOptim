@@ -22,4 +22,3 @@ Returns the index of the best model, in terms of lowest error rate
 \author{
 Martin Vincent
 }
-

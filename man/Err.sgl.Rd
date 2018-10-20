@@ -29,4 +29,3 @@ RMSE is the default error.
 \author{
 Martin Vincent
 }
-

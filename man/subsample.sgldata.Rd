@@ -19,9 +19,6 @@ a sgldata
 \description{
 Pick out a subsample of a sgldata object
 }
-\author{
-Martin Vincent
-}
 \seealso{
 Other sgldata: \code{\link{add_data.sgldata}},
   \code{\link{create.sgldata}},
@@ -29,4 +26,6 @@ Other sgldata: \code{\link{add_data.sgldata}},
   \code{\link{prepare.args}}, \code{\link{prepare_data}},
   \code{\link{rearrange.sgldata}}
 }
-
+\author{
+Martin Vincent
+}

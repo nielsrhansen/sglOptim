@@ -25,4 +25,3 @@ This function returns the nonzero coefficients
 \author{
 Martin Vincent
 }
-

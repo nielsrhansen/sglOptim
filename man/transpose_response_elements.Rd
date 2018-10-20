@@ -18,4 +18,3 @@ Transpose response elements in a response list and sub lists
 \author{
 Martin Vincent
 }
-

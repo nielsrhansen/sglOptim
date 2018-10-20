@@ -17,4 +17,3 @@ The element class of NULL is NULL
 \author{
 Martin Vincent
 }
-

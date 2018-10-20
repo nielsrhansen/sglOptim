@@ -28,9 +28,6 @@
 \description{
 Prepare sgl function arguments using sgldata.
 }
-\author{
-Martin Vincent
-}
 \seealso{
 Other sgldata: \code{\link{add_data.sgldata}},
   \code{\link{create.sgldata}}, \code{\link{prepare.args}},
@@ -38,4 +35,6 @@ Other sgldata: \code{\link{add_data.sgldata}},
   \code{\link{rearrange.sgldata}},
   \code{\link{subsample.sgldata}}
 }
-
+\author{
+Martin Vincent
+}

@@ -20,4 +20,3 @@ Generic function for extracting nonzero features.
 \author{
 Martin Vincent
 }
-

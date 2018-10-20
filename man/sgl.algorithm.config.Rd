@@ -60,4 +60,3 @@ config.no_progressbar <- sgl.algorithm.config(verbose = FALSE)
 \author{
 Martin Vincent
 }
-

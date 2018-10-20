@@ -53,4 +53,3 @@ with \eqn{\xi^{(1)}\in [0,\infty)^{n_1},\dots, \xi^{(m)} \in [0,\infty)^{n_m}}.
 \author{
 Martin Vincent
 }
-

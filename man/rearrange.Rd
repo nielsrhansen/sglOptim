@@ -19,10 +19,9 @@ a rearranged data object of same class as \code{data}
 \description{
 Rearrange the order of the covariates in the \code{data} object.
 }
-\author{
-Martin Vincent
-}
 \seealso{
 rearrange.sgldata
 }
-
+\author{
+Martin Vincent
+}

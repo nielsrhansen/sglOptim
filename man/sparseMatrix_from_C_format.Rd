@@ -15,4 +15,3 @@ Convert sparse matrix  retunred from .Call to sparseMatrix.
 \author{
 Martin Vincent
 }
-

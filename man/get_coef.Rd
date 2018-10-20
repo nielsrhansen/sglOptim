@@ -20,4 +20,3 @@ Extracting nonzero coefficients from list (of lists) of matrices
 \author{
 Martin Vincent
 }
-

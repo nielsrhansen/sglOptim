@@ -31,4 +31,3 @@ and must return a single numeric number, with x a list of true responses and y a
 \author{
 Martin Vincent
 }
-

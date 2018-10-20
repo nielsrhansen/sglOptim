@@ -33,6 +33,5 @@ The package includes generic functions for:
 }
 }
 \author{
-Martin Vincent \email{martin.vincent.dk@gmail.com}
+Martin Vincent
 }
-

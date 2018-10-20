@@ -63,7 +63,7 @@ sgl_lambda_sequence <- function(
 
 	d <- as.integer(d)
 
-	# Prapare arguments
+	# Prepare arguments
 	args <- prepare.args(
 		data = data,
 		parameterGrouping = parameterGrouping,
@@ -72,18 +72,19 @@ sgl_lambda_sequence <- function(
 		alpha = alpha
 	)
 
-	call_sym <- paste(module_name, "sgl_lambda", sep="_")
+	call_sym <- get(paste(module_name, "sgl_lambda", "R", sep="_"),
+	                asNamespace(PACKAGE))
 
-	res <- .Call(call_sym, PACKAGE = PACKAGE,
-		args$data,
-		args$block_dim,
-		args$groupWeights,
-		args$parameterWeights,
-		args$alpha,
-		d,
-		lambda.min,
-		lambda.min.rel,
-		algorithm.config
+	res <- do.call(call_sym, args = 
+	                 list(data = args$data,
+	                      block_dim = args$block_dim,
+	                      groupWeights = args$groupWeights,
+	                      parameterWeights = args$parameterWeights,
+	                      alpha = args$alpha,
+	                      d = d,
+	                      lambda.min = lambda.min,
+	                      lambda.min.rel = lambda.min.rel,
+	                      algorithm.config = algorithm.config)
 	)
 
 	if( any(is.na(res)) ) stop("Can not compute lambda max. Review data and penalty settings.")

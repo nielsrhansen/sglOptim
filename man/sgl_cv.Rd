@@ -69,4 +69,3 @@ Generic sparse group lasso cross validation using multiple possessors
 \author{
 Martin Vincent
 }
-

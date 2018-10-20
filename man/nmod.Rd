@@ -24,4 +24,3 @@ However, note that the objects returned by \code{msgl.cv} and
 \author{
 Martin Vincent
 }
-

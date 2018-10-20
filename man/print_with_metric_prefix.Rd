@@ -20,4 +20,3 @@ Print a numeric with metric prefix
 \author{
 Martin Vincent
 }
-

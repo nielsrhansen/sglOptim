@@ -56,15 +56,16 @@ sgl_test <- function(
     alpha =  alpha
   )
 
-	call_sym <- paste(module_name, "sgl_test", sep="_")
-  problems <- .Call(call_sym, PACKAGE = PACKAGE,
-    args$data,
-    args$block_dim,
-    args$groupWeights,
-    args$parameterWeights,
-    algorithm.config
-  )
-
-  return(problems)
+	call_sym <- get(paste(module_name, "sgl_test", "R", sep="_"),
+	                asNamespace(PACKAGE))
+	problems <-  do.call(call_sym, args = 
+	                       list(data = args$data,
+	                            block_dim = args$block_dim,
+	                            groupWeights = args$groupWeights,
+	                            parameterWeights = args$parameterWeights,
+	                            algorithm.config = algorithm.config)
+	)
+	
+	return(problems)
 
 }

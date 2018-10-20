@@ -20,4 +20,3 @@ Generic function for extracting nonzero parameters for each model.
 \author{
 Martin Vincent
 }
-

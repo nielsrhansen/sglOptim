@@ -55,7 +55,7 @@ SEXP FUN_NAME(sgl_test, MODULE_NAME)(
 
   sgl::SglProblem sgl(dim_config, config);
 	sgl::SglTester tester(sgl);
-  typename OBJECTIVE::instance_type objective = obj_type.create_instance(sgl.setup);
+  OBJECTIVE::instance_type objective = obj_type.create_instance(sgl.setup);
 
 	sgl::natural max_problems = 10;
 

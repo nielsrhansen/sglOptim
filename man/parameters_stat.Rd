@@ -20,4 +20,3 @@ Generic function for extracting parameter statistics.
 \author{
 Martin Vincent
 }
-

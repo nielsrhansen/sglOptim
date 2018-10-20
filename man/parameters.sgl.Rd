@@ -21,4 +21,3 @@ Only the parameters of nonzero features (columns of the \eqn{beta} matrices) are
 \author{
 Martin Vincent
 }
-

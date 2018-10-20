@@ -20,4 +20,3 @@ Returns the index of the best model
 \author{
 Martin Vincent
 }
-

@@ -20,4 +20,3 @@ Extracts the number of nonzero parameters in each model.
 \author{
 Martin Vincent
 }
-

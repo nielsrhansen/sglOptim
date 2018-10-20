@@ -15,4 +15,3 @@ sgl.standard.config
 Martin Vicnet
 }
 \keyword{datasets}
-

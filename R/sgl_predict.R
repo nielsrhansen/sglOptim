@@ -99,8 +99,9 @@ sgl_predict <- function(
 		beta <- lapply(X = object$beta, FUN = function(m) as(m, "CsparseMatrix"))
 		beta <- lapply(X = beta, FUN = function(m) list(dim(m), m@p, m@i, m@x))
 
-		call_sym <- paste(module_name, "sgl_predict", sep="_")
-		response_list <- .Call(call_sym, PACKAGE = PACKAGE, data, beta)
+		call_sym <- get(paste(module_name, "sgl_predict", "R", sep="_"),
+		                asNamespace(PACKAGE))
+		response_list <- do.call(call_sym, args = list(data = data, beta = beta))
 
 	} else  {
     stop("No models found -- missing beta")

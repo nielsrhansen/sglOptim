@@ -8,4 +8,3 @@
 This data set is for testing only.
 }
 \keyword{data}
-

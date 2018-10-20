@@ -19,9 +19,6 @@ prepare_data(x, default = NULL, type = "numeric", sparse = is(x,
 \description{
 Creates a sgldata data object from a matrix or vector
 }
-\author{
-Martin Vincent
-}
 \seealso{
 Other sgldata: \code{\link{add_data.sgldata}},
   \code{\link{create.sgldata}},
@@ -30,4 +27,6 @@ Other sgldata: \code{\link{add_data.sgldata}},
   \code{\link{rearrange.sgldata}},
   \code{\link{subsample.sgldata}}
 }
-
+\author{
+Martin Vincent
+}

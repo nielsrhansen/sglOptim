@@ -42,4 +42,3 @@ The sequence ranges from a data determined maximal lambda \eqn{\lambda_\textrm{m
 \author{
 Martin Vincent
 }
-

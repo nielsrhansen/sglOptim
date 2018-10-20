@@ -109,17 +109,19 @@ sgl_fit <- function(module_name, PACKAGE,
 	if( any(idx < 0) || any(idx >= length(lambda)) ) {
 		stop("return_indices indvalid")
 	}
-
-	call_sym <- paste(module_name, "sgl_fit", sep="_")
-	res <- .Call(call_sym, PACKAGE = PACKAGE,
-		args$data,
-		args$block_dim,
-		args$groupWeights,
-		args$parameterWeights,
-		args$alpha,
-		lambda,
-		idx,
-		algorithm.config
+	
+	call_sym <- get(paste(module_name, "sgl_fit", "R", sep="_"),
+	                asNamespace(PACKAGE))
+	
+	res <- do.call(call_sym, args = 
+	                 list(data = args$data,
+	                      block_dim = args$block_dim,
+	                      groupWeights = args$groupWeights,
+	                      parameterWeights = args$parameterWeights,
+	                      alpha = args$alpha,
+	                      lambda = lambda,
+	                      idx = idx,
+	                      algorithm.config = algorithm.config)
 	)
 
 	# Add true response

@@ -15,4 +15,3 @@ Prepare sparse matrix for .Call
 \author{
 Martin Vincent
 }
-

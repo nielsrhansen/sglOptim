@@ -23,4 +23,3 @@ Returns the fitted models.
 \author{
 Martin Vincent
 }
-

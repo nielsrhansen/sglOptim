@@ -20,4 +20,3 @@ Extract the nonzero features of the fitted models
 \author{
 Martin Vincent
 }
-

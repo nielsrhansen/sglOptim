@@ -109,4 +109,3 @@ The content of the list will depend on the type of the response.
 \author{
 Martin Vincent
 }
-

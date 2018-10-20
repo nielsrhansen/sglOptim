@@ -32,4 +32,3 @@ Detected problems will be printed to the console.'
 \author{
 Martin Vincent
 }
-

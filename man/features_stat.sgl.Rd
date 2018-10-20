@@ -20,4 +20,3 @@ Extracts the number of nonzero features (or group) in each model.
 \author{
 Martin Vincent
 }
-

@@ -22,4 +22,3 @@ Pick out a subsample of an object
 \author{
 Martin Vincent
 }
-

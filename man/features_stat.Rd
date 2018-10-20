@@ -20,4 +20,3 @@ Generic function for extracting feature statistics.
 \author{
 Martin Vincent
 }
-

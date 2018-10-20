@@ -22,4 +22,3 @@ This function returns the estimated models (that is the \eqn{beta} matrices)
 \author{
 Martin Vincent
 }
-

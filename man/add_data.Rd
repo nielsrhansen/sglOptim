@@ -21,4 +21,3 @@ Addes a data to a sgldata data object
 \author{
 Martin Vincent
 }
-

@@ -15,4 +15,3 @@ Prints information about sgl object
 \author{
 Martin Vincent
 }
-

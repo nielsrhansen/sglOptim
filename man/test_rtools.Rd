@@ -12,4 +12,3 @@ This function runs some internal tests and is not intended for users of the pack
 \author{
 Martin Vincent
 }
-

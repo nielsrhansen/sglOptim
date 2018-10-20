@@ -29,9 +29,6 @@ create.sgldata(x, y, response_dimension = .get_response_dimension(y),
 \description{
 Creates a sgldata object from a design matrix and an optional response vector or matrix.
 }
-\author{
-Martin Vincent
-}
 \seealso{
 Other sgldata: \code{\link{add_data.sgldata}},
   \code{\link{prepare.args.sgldata}},
@@ -39,4 +36,6 @@ Other sgldata: \code{\link{add_data.sgldata}},
   \code{\link{rearrange.sgldata}},
   \code{\link{subsample.sgldata}}
 }
-
+\author{
+Martin Vincent
+}

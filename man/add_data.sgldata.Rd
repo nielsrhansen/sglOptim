@@ -25,9 +25,6 @@
 \description{
 Addes a data to a sgldata data object
 }
-\author{
-Martin Vincent
-}
 \seealso{
 Other sgldata: \code{\link{create.sgldata}},
   \code{\link{prepare.args.sgldata}},
@@ -35,4 +32,6 @@ Other sgldata: \code{\link{create.sgldata}},
   \code{\link{rearrange.sgldata}},
   \code{\link{subsample.sgldata}}
 }
-
+\author{
+Martin Vincent
+}

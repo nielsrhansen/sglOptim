@@ -53,8 +53,8 @@ namespace arma {
 
            //Mem
 
-          uword* new_row_indices = memory::acquire_chunked<uword>(x_n_nonzero + y_n_nonzero + 1);
-          eT* new_values         = memory::acquire_chunked<eT>(x_n_nonzero + y_n_nonzero + 1);
+          uword* new_row_indices = memory::acquire<uword>(x_n_nonzero + y_n_nonzero + 1);
+          eT* new_values         = memory::acquire<eT>(x_n_nonzero + y_n_nonzero + 1);
 
           arrayops::copy(new_values, x.values, x_n_nonzero);
           arrayops::copy(new_values+x_n_nonzero, y.values, y_n_nonzero+1);

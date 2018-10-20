@@ -23,4 +23,3 @@ Note that cv and subsampling objects does not conating any models even though nm
 \author{
 Martin Vincent
 }
-

@@ -50,10 +50,9 @@ should return a vector with estimates of the \emph{expected generalization error
 should return a matrix with the test errors (each column corresponding to a model, i.e. rows corresponds to tests).
 }
 }
-\author{
-Martin Vincent
-}
 \seealso{
 compute_error
 }
-
+\author{
+Martin Vincent
+}
