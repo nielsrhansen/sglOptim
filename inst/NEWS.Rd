@@ -1,6 +1,13 @@
 \name{NEWS}
 \title{News for Package 'sglOptim'}
 
+
+\section{Changes in sglOptim version 1.3.7 (2018-10-18)}{
+\itemize{
+\item Original author and previous maintainer, Martin Vincent, has stopped development. This version is released by a new maintainer. Changes from version 1.3.6 are only to comply to CRAN policies.
+}
+}
+
 \section{Changes in sglOptim version 1.3.6 (2017-03-03)}{
 \itemize{
 \item Bug fixes
