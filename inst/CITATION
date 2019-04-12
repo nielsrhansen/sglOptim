@@ -5,12 +5,13 @@ vers <- paste("R package version", meta$Version)
 
 citEntry(entry="Manual",
          title = "sglOptim: Sparse group lasso optimizer",
-         author = personList(as.person("Martin Vincent")),
+         author = personList(as.person("Vincent, M."),
+                             as.person("Hansen, N. R.")),
          year = year,
          note = vers,
 
          textVersion =
-         paste("Martin Vincent (",
+         paste("Vincent, M. and Hansen, N. R. (",
                year,
                "). sglOptim: Sparse group lasso optimizer. ",
                vers, ".", sep=""))

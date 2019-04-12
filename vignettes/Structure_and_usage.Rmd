@@ -1,0 +1,131 @@
+---
+title: "sglOptim structure and usage"
+author: "Niels Richard Hansen"
+date: "12/20/2018"
+output: html_document
+---
+
+This document collects some basic information on how the R package 
+[sglOptim](https://github.com/nielsrhansen/sglOptim) is implemented, and how 
+it is intended to be used. 
+
+# Background
+
+The package was originally implemented by Martin Vincent, who also implemented
+the [msgl](https://github.com/nielsrhansen/msgl) and [lsgl](https://github.com/nielsrhansen/lsgl) 
+packages based on sglOptim. The package does not provide any directly applicable 
+statistical functionality but it provides generic implementations
+of sparse group lasso optimization as a C++ template library. Other R packages
+can then be implemented on top of this package by specifying the details on 
+loss function computation. This is largely done via macros and the implementation
+of a class representing the loss and its derivatives. The package exploits 
+efficient numerical linear algebra algorithms, including sparse matrix linear 
+algebra, via the C++ template library [Armadillo](http://arma.sourceforge.net) 
+that is available in R via the RcppArmadillo package. 
+
+Compiling source code in a package using sglOptim will provide   
+routines for fitting models, automatic computation of sequences of 
+tuning parameters, and cross-validation/subsampling. Most of the C++ code 
+behind these routines is from sglOptim. The sglOptim package provides, 
+in addition to the C++ template library, some R wrappers for calling the 
+resulting compiled routines. In the orginal implementation, those R wrappers 
+called the compiled routines directly, but this is not acceptable on CRAN 
+anymore because the R wrappers in sglOptim would call compiled code not 
+available to sglOptim itself at compilation/installation time. As a consequence,
+the R wrappers in sglOptim now calls R functions provided by the package 
+that relies on sglOptim. These R functions are just supposed to be a thin layer 
+around the call of the compiled function. Their implementation will largely 
+be boiler plate code.
+
+
+# The macro specifications
+
+Inclusion of `sgl.h` header from sglOptim.
+
+## Example from msgl
+
+The following code from `msgl.cpp` defines the *dense msgl module*. The terminology
+"module" is used here in the ordinary meaning of a collection of related code
+implementing the functionality needed for fitting multinomial regression models 
+via sparse group lasso penalized likelihood methods. 
+
+```{cpp}
+// Module name
+#define MODULE_NAME msgl_dense
+
+//Objective
+#include "multinomial_loss.h"
+
+#define OBJECTIVE multinomial
+
+#include <sgl/RInterface/sgl_lambda_seq.h>
+#include <sgl/RInterface/sgl_fit.h>
+
+#include "multinomial_response.h"
+#define PREDICTOR sgl::LinearPredictor < sgl::matrix , MultinomialResponse >
+
+#include <sgl/RInterface/sgl_predict.h>
+#include <sgl/RInterface/sgl_subsampling.h>
+```
+
+The code is pure macro specifications. The specified module name and 
+the objective function, as implemented here in the `multinomial_loss.h` header, 
+and the inclusion of the two relevant sglOptim headers provide routines 
+for tuning parameter computation and model fitting. The subsequent inclusion of
+the `multinomial_response.h` header, the specified predictor and the other two 
+sglOptim headers provide prediction and subsampling routines. The routines will
+have names
+
+`msgl_dense_sgl_lambda`   
+`msgl_dense_sgl_fit`  
+`msgl_dense_sgl_predict`  
+`msgl_dense_sgl_subsampling`  
+  
+The routines are then registrered and available from R. The boiler plate code 
+below shows how the msgl package implements an R function interface that the 
+generic code in sglOptim exploits. 
+
+# The loss template class
+
+# The boiler plate code
+
+## Example from msgl
+
+The `msgl_dense_sgl_fit` function 
+
+```{r, eval=FALSE}
+#' C interface
+#'
+#' @keywords internal
+#' @export
+msgl_dense_sgl_fit_R <- function(
+  data,
+  block_dim,
+  groupWeights,
+  parameterWeights,
+  alpha,
+  lambda,
+  idx,
+  algorithm.config) {
+  
+  .Call(msgl_dense_sgl_fit, PACKAGE = "msgl",
+        data,
+        block_dim,
+        groupWeights,
+        parameterWeights,
+        alpha,
+        lambda,
+        idx,
+        algorithm.config
+  )
+}
+```
+
+
+
+
+
+
+
+
+

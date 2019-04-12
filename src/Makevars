@@ -1,7 +1,14 @@
 PKG_CXXFLAGS = -I'../inst/include'
 PKG_LIBS = $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
 
-# strip debug symbols for smaller Linux binaries
-strippedLib: $(SHLIB)
-		if test -e "/usr/bin/strip" & test -e "/bin/uname" & [[ `uname` == "Linux" ]] ; then /usr/bin/strip --strip-debug $(SHLIB); fi
-.phony: strippedLib
+## strip debug symbols for smaller Linux binaries
+## This idea followed the advice here
+## https://stackoverflow.com/questions/46280628/object-files-in-r-package-too-large-rcpp
+## but it is according to Prof Ripley contrary to the GNU coding standards 
+## and also against CRAN policy on 'cross-platform portable code'
+## The consequence of not stripping debug symbols is somewhat larger Linux binaries
+## supposedly caused by the template C++ in the package. See also
+## http://dirk.eddelbuettel.com/blog/2017/08/20/#010_stripping_shared_libraries
+# strippedLib: $(SHLIB)
+#		if test -e "/usr/bin/strip" & test -e "/bin/uname" & [[ `uname` == "Linux" ]] ; then /usr/bin/strip --strip-debug $(SHLIB); fi
+# .phony: strippedLib
