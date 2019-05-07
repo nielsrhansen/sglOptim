@@ -4,8 +4,8 @@
 \alias{linear_test_full_spx_sgl_subsampling_R}
 \title{C interface}
 \usage{
-linear_test_full_spx_sgl_subsampling_R(data, test_data, block_dim, groupWeights,
-  parameterWeights, alpha, lambda, idx, algorithm.config)
+linear_test_full_spx_sgl_subsampling_R(data, test_data, block_dim,
+  groupWeights, parameterWeights, alpha, lambda, idx, algorithm.config)
 }
 \description{
 C interface

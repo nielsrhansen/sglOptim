@@ -4,7 +4,8 @@
 \alias{coef.sgl}
 \title{Extracting the nonzero coefficients}
 \usage{
-\method{coef}{sgl}(object, index = 1:nmod(object), parameter = "beta", ...)
+\method{coef}{sgl}(object, index = 1:nmod(object), parameter = "beta",
+  ...)
 }
 \arguments{
 \item{object}{a sgl object}

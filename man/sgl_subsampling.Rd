@@ -5,10 +5,10 @@
 \title{Generic sparse group lasso subsampling procedure}
 \usage{
 sgl_subsampling(module_name, PACKAGE, data, parameterGrouping = NULL,
-  groupWeights = NULL, parameterWeights = NULL, alpha, lambda, d = 100,
-  compute_lambda = length(lambda) == 1, training = NULL, test = NULL,
-  responses = NULL, auto_response_names = TRUE, collapse = FALSE,
-  max.threads = NULL, use_parallel = FALSE,
+  groupWeights = NULL, parameterWeights = NULL, alpha, lambda,
+  d = 100, compute_lambda = length(lambda) == 1, training = NULL,
+  test = NULL, responses = NULL, auto_response_names = TRUE,
+  collapse = FALSE, max.threads = NULL, use_parallel = FALSE,
   algorithm.config = sgl.standard.config)
 }
 \arguments{

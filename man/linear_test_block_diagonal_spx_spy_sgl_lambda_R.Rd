@@ -4,8 +4,9 @@
 \alias{linear_test_block_diagonal_spx_spy_sgl_lambda_R}
 \title{C interface}
 \usage{
-linear_test_block_diagonal_spx_spy_sgl_lambda_R(data, block_dim, groupWeights,
-  parameterWeights, alpha, d, lambda.min, lambda.min.rel, algorithm.config)
+linear_test_block_diagonal_spx_spy_sgl_lambda_R(data, block_dim,
+  groupWeights, parameterWeights, alpha, d, lambda.min, lambda.min.rel,
+  algorithm.config)
 }
 \description{
 C interface

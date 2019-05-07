@@ -5,10 +5,11 @@
 \title{Generic sparse group lasso cross validation using multiple possessors}
 \usage{
 sgl_cv(module_name, PACKAGE, data, parameterGrouping = NULL,
-  groupWeights = NULL, parameterWeights = NULL, alpha, lambda, d = 100,
-  compute_lambda = length(lambda) == 1, fold = 2, sampleGroups = NULL,
-  cv.indices = list(), responses = NULL, max.threads = NULL,
-  use_parallel = FALSE, algorithm.config = sgl.standard.config)
+  groupWeights = NULL, parameterWeights = NULL, alpha, lambda,
+  d = 100, compute_lambda = length(lambda) == 1, fold = 2,
+  sampleGroups = NULL, cv.indices = list(), responses = NULL,
+  max.threads = NULL, use_parallel = FALSE,
+  algorithm.config = sgl.standard.config)
 }
 \arguments{
 \item{module_name}{reference to objective specific C++ routines.}

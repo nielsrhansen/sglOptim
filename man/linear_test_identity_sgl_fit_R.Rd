@@ -4,8 +4,8 @@
 \alias{linear_test_identity_sgl_fit_R}
 \title{C interface}
 \usage{
-linear_test_identity_sgl_fit_R(data, block_dim, groupWeights, parameterWeights,
-  alpha, lambda, idx, algorithm.config)
+linear_test_identity_sgl_fit_R(data, block_dim, groupWeights,
+  parameterWeights, alpha, lambda, idx, algorithm.config)
 }
 \description{
 C interface

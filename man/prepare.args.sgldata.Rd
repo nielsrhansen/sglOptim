@@ -5,8 +5,8 @@
 \title{Prepare sgl function arguments}
 \usage{
 \method{prepare.args}{sgldata}(data, parameterGrouping = NULL,
-  groupWeights = NULL, parameterWeights = NULL, parameterNames = NULL,
-  alpha, test_data = NULL, ...)
+  groupWeights = NULL, parameterWeights = NULL,
+  parameterNames = NULL, alpha, test_data = NULL, ...)
 }
 \arguments{
 \item{data}{a sgldata object}
@@ -38,3 +38,4 @@ Other sgldata: \code{\link{add_data.sgldata}},
 \author{
 Martin Vincent
 }
+\concept{sgldata}

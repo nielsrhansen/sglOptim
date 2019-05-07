@@ -5,9 +5,9 @@
 \title{Fit a Sparse Group Lasso Regularization Path.}
 \usage{
 sgl_fit(module_name, PACKAGE, data, parameterGrouping = NULL,
-  groupWeights = NULL, parameterWeights = NULL, alpha, lambda, d = 100,
-  compute_lambda = length(lambda) == 1, return_indices = NULL,
-  algorithm.config = sgl.standard.config)
+  groupWeights = NULL, parameterWeights = NULL, alpha, lambda,
+  d = 100, compute_lambda = length(lambda) == 1,
+  return_indices = NULL, algorithm.config = sgl.standard.config)
 }
 \arguments{
 \item{module_name}{reference to objective specific C++ routines.}

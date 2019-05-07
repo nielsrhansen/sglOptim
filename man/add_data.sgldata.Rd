@@ -35,3 +35,4 @@ Other sgldata: \code{\link{create.sgldata}},
 \author{
 Martin Vincent
 }
+\concept{sgldata}

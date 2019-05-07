@@ -1,8 +1,12 @@
 ---
 title: "sglOptim structure and usage"
 author: "Niels Richard Hansen"
-date: "12/20/2018"
+date: "`r Sys.Date()`"
 output: html_document
+vignette: >
+  %\VignetteIndexEntry{sglOptim structure and usage}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 This document collects some basic information on how the R package 

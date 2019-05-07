@@ -5,9 +5,9 @@
 \title{Create a sgldata object}
 \usage{
 create.sgldata(x, y, response_dimension = .get_response_dimension(y),
-  response_names = .get_response_names(y), sparseX = is(x, "sparseMatrix"),
-  sparseY = is(y, "sparseMatrix"), typeX = element_class(x),
-  typeY = element_class(y))
+  response_names = .get_response_names(y), sparseX = is(x,
+  "sparseMatrix"), sparseY = is(y, "sparseMatrix"),
+  typeX = element_class(x), typeY = element_class(y))
 }
 \arguments{
 \item{x}{the design matrix, a matrix of size \eqn{N \times p} (will be parsed to the loss module as \code{X}).}
@@ -39,3 +39,4 @@ Other sgldata: \code{\link{add_data.sgldata}},
 \author{
 Martin Vincent
 }
+\concept{sgldata}
