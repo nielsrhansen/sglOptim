@@ -404,7 +404,7 @@ inline void GenralizedLinearLossBase < T , E >::compute_hessian_norm() const
 
 	//NOTE norm configable, 2-norm, 1-norm
 
-	partial_hessian_norm = sqrt(as_scalar(max(sum(square(partial_hessian), 1))));
+	partial_hessian_norm = sqrt(arma::as_scalar(arma::max(arma::sum(arma::square(partial_hessian), 1))));
 	//partial_hessian_norm = as_scalar(max(sum(abs(partial_hessian), 1)));
 
 	level0_bound = partial_hessian_norm * x_norm_max;
