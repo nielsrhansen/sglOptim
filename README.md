@@ -24,6 +24,12 @@ The loss/objective function must be defined in a C++ module.
 
 ### Installation
 
+Install the released version from CRAN:
+
+``` r
+install.packages("sglOptim")
+```
+
 Install the version from GitHub:
 
 ``` r
