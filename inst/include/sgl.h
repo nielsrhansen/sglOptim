@@ -45,7 +45,9 @@
 #else
 // Do no debugging
 #define ARMA_NO_DEBUG
+#ifndef NDEBUG
 #define NDEBUG
+#endif
 #endif
 
 // Registration helper macros

@@ -24,17 +24,14 @@ The loss/objective function must be defined in a C++ module.
 
 ### Installation
 
-Install the released version from CRAN:
+Installation from souce requires installation of the necessary compiler tools 
+for [Mac](https://mac.r-project.org/tools/) or [Windows](https://cran.r-project.org/bin/windows/Rtools/history.html).
+
+Install the package from GitHub:
 
 ``` r
-install.packages("sglOptim")
-```
-
-Install the version from GitHub:
-
-``` r
-# install.packages("devtools")
-devtools::install_github("nielsrhansen/sglOptim", build_vignettes = TRUE)
+# install.packages("remotes") # uncomment if remotes is not already installed
+remotes::install_github("nielsrhansen/sglOptim", build_vignettes = TRUE)
 ```
 
 If you don’t want to build the vignettes when installing, just remove
