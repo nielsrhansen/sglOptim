@@ -26,11 +26,11 @@
 #include "rtools/test.h"
 
 void report_error(const char *msg) {
-    Rf_error(msg);
+    Rf_error(%s msg);
 }
 
 void report_warning(const char *msg) {
-    Rf_warning(msg);
+    Rf_warning(%s msg);
 }
 
 #endif /* RTOOLS_H_ */
