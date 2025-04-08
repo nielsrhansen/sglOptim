@@ -151,7 +151,7 @@ private:
       sgl::natural block_start = sgl.setup.block_start_index(block_index);
       sgl::natural block_end = sgl.setup.block_end_index(block_index);
 
-      p.set_block(block_index, Rcpp::wrap(v.subvec(block_start, block_end)));
+      p.set_block(block_index, arma::conv_to<arma::vec>::from(v.subvec(block_start, block_end)));
     }
 
     return p;
