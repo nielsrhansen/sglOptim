@@ -49,6 +49,12 @@
 #endif
 #endif
 
+//Support for xl matrices
+//#define ARMA_64BIT_WORD
+
+#include <armadillo>
+#include <Rcpp.h>
+
 // Registration helper macros
 #define STR_VALUE(x) #x
 #define GET_STR_VALUE(x) STR_VALUE(x)
