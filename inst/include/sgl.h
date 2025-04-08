@@ -21,13 +21,12 @@
 
 #define R_NO_REMAP
 
+//R, Rcpp, RcppArmadillo
+#include <RcppArmadillo.h>
+
 //Progress monitor
 #include <progress.hpp>
 
-//Rcpp ect
-#include <RcppCommon.h>
-#include <Rconfig.h>
-#include <RcppArmadilloConfig.h>
 
 // Debugging
 #ifdef SGL_DEBUG
@@ -61,11 +60,6 @@
 
 #define CALL_METHOD(METHOD, MODULE, ARGS) {GET_STR_VALUE(FUN_NAME(METHOD,MODULE)), (DL_FUNC) &r_ ## MODULE ## _ ## METHOD, ARGS}
 
-//Support for xl matrices
-//#define ARMA_64BIT_WORD
-
-#include <armadillo>
-#include <Rcpp.h>
 
 //Boost
 #include <boost/math/special_functions/fpclassify.hpp>
